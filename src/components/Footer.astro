@@ -1,0 +1,147 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <span class="logo-icon">🎙️</span>
+          <span class="logo-text">Ad<span class="gradient-text">Whisper</span></span>
+        </a>
+        <p class="footer-desc">
+          Free, private audio transcription & translation powered by OpenAI Whisper — running entirely in your browser. No uploads, no servers, just AI.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Product</h4>
+        <ul>
+          <li><a href="/transcribe">Transcribe Audio</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Resources</h4>
+        <ul>
+          <li><a href="/blog/what-is-whisper-ai">What is Whisper?</a></li>
+          <li><a href="/blog/transcribe-audio-in-browser">How It Works</a></li>
+          <li><a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">OpenAI Whisper ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} AdWhisper. All rights reserved.</p>
+      <p class="footer-note">Audio is processed locally in your browser. No data is ever uploaded to any server.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-16) 0 var(--space-8);
+    margin-top: var(--space-20);
+    background: rgba(17, 17, 40, 0.5);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xl);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+  }
+
+  .footer-logo:hover { color: var(--color-text); }
+
+  .footer-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 320px;
+  }
+
+  .footer-heading {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .footer-links a {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-primary-light);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .footer-bottom p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .footer-note {
+    font-size: var(--text-xs) !important;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

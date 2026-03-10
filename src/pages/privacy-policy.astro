@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — AdWhisper"
+  description="AdWhisper's privacy policy. Learn how we protect your data — all audio processing happens locally in your browser. We never collect, store, or transmit your audio."
+  canonicalUrl="/privacy-policy"
+>
+  <section class="section">
+    <div class="container">
+      <div class="prose animate-fade-in">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last updated:</strong> March 10, 2026</p>
+
+        <h2>Our Core Privacy Principle</h2>
+        <p>
+          AdWhisper is built on a fundamental privacy principle: <strong>your audio data never leaves your device</strong>.
+          All speech recognition and translation processing happens entirely within your web browser using local AI models.
+          We do not upload, store, transmit, or have access to any audio you process through our tool.
+        </p>
+
+        <h2>Information We Do NOT Collect</h2>
+        <ul>
+          <li>Audio files or recordings</li>
+          <li>Transcription or translation results</li>
+          <li>Microphone recordings</li>
+          <li>Personal voice data</li>
+          <li>Personally identifiable information</li>
+          <li>Account information (we don't have accounts)</li>
+        </ul>
+
+        <h2>Information We May Collect</h2>
+        <p>We may collect limited, non-personal information through standard web technologies:</p>
+
+        <h3>Analytics Data</h3>
+        <p>
+          We may use privacy-respecting analytics to understand general site usage patterns. This may include:
+          page views, approximate geographic region (country level), browser type, device type, and referring URLs.
+          This data is aggregated and cannot identify individual users.
+        </p>
+
+        <h3>Advertising (Ezoic)</h3>
+        <p>
+          We use Ezoic as our advertising partner to display ads on our site. Ezoic may use cookies and similar
+          technologies to serve personalized or non-personalized ads based on your browsing behavior.
+          For more information about how Ezoic handles data, please see
+          <a href="https://www.ezoic.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Ezoic's Privacy Policy</a>.
+        </p>
+
+        <h3>Model Caching</h3>
+        <p>
+          The Whisper AI model files are downloaded from Hugging Face's content delivery network and cached in your
+          browser's local storage (Cache API / IndexedDB). These model files do not contain any personal data.
+          You can clear this cache at any time through your browser settings.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+          We may use cookies for:
+        </p>
+        <ul>
+          <li><strong>Essential cookies:</strong> Required for basic site functionality</li>
+          <li><strong>Advertising cookies:</strong> Used by Ezoic to serve and optimize ads</li>
+          <li><strong>Analytics cookies:</strong> Used to understand site usage patterns</li>
+        </ul>
+        <p>
+          For more details, see our <a href="/cookie-policy">Cookie Policy</a>.
+        </p>
+
+        <h2>Third-Party Services</h2>
+        <p>We use the following third-party services:</p>
+        <ul>
+          <li><strong>Hugging Face:</strong> Hosts the AI model files that are downloaded to your browser. See <a href="https://huggingface.co/privacy" target="_blank" rel="noopener noreferrer">Hugging Face Privacy Policy</a>.</li>
+          <li><strong>Ezoic:</strong> Advertising platform. See <a href="https://www.ezoic.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Ezoic Privacy Policy</a>.</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>
+          Since audio data never leaves your device, there are no servers to breach or databases to compromise.
+          Your transcription data is as secure as your own device.
+        </p>
+
+        <h2>Children's Privacy</h2>
+        <p>
+          AdWhisper is not directed at children under 13. We do not knowingly collect personal information
+          from children.
+        </p>
+
+        <h2>Your Rights</h2>
+        <p>Under GDPR, CCPA, and similar regulations, you have the right to:</p>
+        <ul>
+          <li>Access any personal data we hold about you (we hold none)</li>
+          <li>Request deletion of your data (nothing to delete)</li>
+          <li>Opt out of personalized advertising (through your browser settings or Ezoic's controls)</li>
+          <li>Clear cached model files from your browser at any time</li>
+        </ul>
+
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this privacy policy from time to time. Any changes will be posted on this page
+          with an updated revision date.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this privacy policy, please contact us at
+          <strong>privacy@adwhisper.com</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

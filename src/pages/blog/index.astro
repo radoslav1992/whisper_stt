@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EzoicAd from '../../components/EzoicAd.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Blog — AdWhisper | AI Transcription Tips, Guides & News"
+  description="Learn about AI audio transcription, OpenAI Whisper, privacy-first speech recognition, and tips for getting the best transcription results."
+  canonicalUrl="/blog"
+>
+  <section class="section">
+    <div class="container">
+      <div class="blog-header animate-fade-in">
+        <span class="badge">📚 Latest Articles</span>
+        <h1>The <span class="gradient-text">AdWhisper</span> Blog</h1>
+        <p class="section-subtitle">
+          Guides, tips, and insights about AI-powered audio transcription, privacy, and getting the most from Whisper.
+        </p>
+      </div>
+
+      <EzoicAd slotId={301} />
+
+      <div class="blog-grid">
+        {posts.map((post, i) => (
+          <a href={`/blog/${post.slug}`} class={`glass-card blog-card animate-fade-in animate-delay-${(i % 4) + 1}`}>
+            <div class="blog-card-meta">
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              {post.data.readTime && <span class="blog-card-time">{post.data.readTime}</span>}
+            </div>
+            <h2 class="blog-card-title">{post.data.title}</h2>
+            <p class="blog-card-desc">{post.data.description}</p>
+            <div class="blog-card-tags">
+              {post.data.tags.slice(0, 3).map((tag) => (
+                <span class="blog-tag">{tag}</span>
+              ))}
+            </div>
+            <span class="blog-card-link">Read article →</span>
+          </a>
+        ))}
+      </div>
+
+      <EzoicAd slotId={302} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-card:hover { color: inherit; }
+
+  .blog-card-meta {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  .blog-card-meta time {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .blog-card-time {
+    font-size: var(--text-xs);
+    color: var(--color-primary-light);
+    background: var(--color-primary-glow);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-full);
+  }
+
+  .blog-card-title {
+    font-size: var(--text-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .blog-card:hover .blog-card-title {
+    color: var(--color-primary-light);
+  }
+
+  .blog-card-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    flex: 1;
+  }
+
+  .blog-card-tags {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .blog-tag {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    background: var(--color-bg-card);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+  }
+
+  .blog-card-link {
+    font-size: var(--text-sm);
+    color: var(--color-primary-light);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

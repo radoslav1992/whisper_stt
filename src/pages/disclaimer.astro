@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Disclaimer — AdWhisper"
+  description="Disclaimer for AdWhisper's AI audio transcription and translation service. Important information about accuracy, limitations, and proper usage."
+  canonicalUrl="/disclaimer"
+>
+  <section class="section">
+    <div class="container">
+      <div class="prose animate-fade-in">
+        <h1>Disclaimer</h1>
+        <p><strong>Last updated:</strong> March 10, 2026</p>
+
+        <h2>AI Transcription Accuracy</h2>
+        <p>
+          AdWhisper uses OpenAI's Whisper AI model for speech recognition and translation.
+          While Whisper is one of the most advanced speech recognition systems available,
+          <strong>no AI transcription system is 100% accurate</strong>.
+        </p>
+        <p>Factors that can affect accuracy include:</p>
+        <ul>
+          <li>Audio quality (background noise, microphone quality, recording conditions)</li>
+          <li>Speaker accent, dialect, or speech patterns</li>
+          <li>Multiple overlapping speakers</li>
+          <li>Technical terminology, proper nouns, and specialized vocabulary</li>
+          <li>Low-resource languages with less training data</li>
+          <li>Music, sound effects, or other non-speech audio</li>
+        </ul>
+
+        <h2>Not a Substitute for Professional Services</h2>
+        <p>
+          AdWhisper's transcriptions should <strong>not</strong> be used as a substitute for
+          professional transcription services in situations where accuracy is critical, including:
+        </p>
+        <ul>
+          <li><strong>Legal proceedings:</strong> Court transcripts, depositions, and legal documents</li>
+          <li><strong>Medical records:</strong> Clinical notes, diagnoses, and medical documentation</li>
+          <li><strong>Financial documents:</strong> Financial reports, audit transcripts, and regulatory filings</li>
+          <li><strong>Academic submissions:</strong> Research papers, dissertations, and official academic records</li>
+        </ul>
+        <p>
+          Always review and verify AI-generated transcriptions before using them for important purposes.
+        </p>
+
+        <h2>Translation Limitations</h2>
+        <p>
+          The translation feature converts speech in any supported language to English text.
+          Machine translation may not capture nuances, idioms, cultural context, or specialized
+          terminology accurately. For important communications, consult a professional translator.
+        </p>
+
+        <h2>Device and Browser Requirements</h2>
+        <p>
+          AdWhisper runs AI models directly in your browser, which requires:
+        </p>
+        <ul>
+          <li>A modern web browser (Chrome, Firefox, Edge, or Safari)</li>
+          <li>Sufficient RAM (at least 4 GB recommended)</li>
+          <li>Storage space for the model cache (~150 MB)</li>
+          <li>Internet connection for the initial model download</li>
+        </ul>
+        <p>
+          Performance varies by device. Older or less powerful devices may experience slower
+          processing times.
+        </p>
+
+        <h2>No Warranty</h2>
+        <p>
+          The Service is provided without any warranty, express or implied. We do not guarantee
+          the accuracy, reliability, or completeness of any transcription or translation produced
+          by the Service.
+        </p>
+
+        <h2>Third-Party Content</h2>
+        <p>
+          The Whisper model is developed by OpenAI. Transformers.js is developed by Hugging Face.
+          AdWhisper is not affiliated with, endorsed by, or sponsored by OpenAI or Hugging Face.
+          We are not responsible for the functionality, performance, or limitations of these
+          third-party components.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For questions about this disclaimer, contact us at <strong>legal@adwhisper.com</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

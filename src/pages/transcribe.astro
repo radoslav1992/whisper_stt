@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EzoicAd from '../components/EzoicAd.astro';
+import WhisperApp from '../components/WhisperApp.jsx';
+---
+
+<BaseLayout
+  title="Transcribe Audio Free — AdWhisper AI Transcription Tool"
+  description="Transcribe or translate audio files for free using OpenAI Whisper AI. Runs 100% in your browser — your audio never leaves your device. Supports 99+ languages."
+  canonicalUrl="/transcribe"
+>
+  <section class="section">
+    <div class="container">
+      <div class="transcribe-header animate-fade-in">
+        <span class="badge">🔒 100% Private — Runs Locally</span>
+        <h1>AI Audio <span class="gradient-text">Transcription</span></h1>
+        <p class="section-subtitle" style="margin-bottom: var(--space-6);">
+          Upload an audio file or record from your microphone. Whisper AI processes everything
+          in your browser — nothing is uploaded to any server.
+        </p>
+      </div>
+
+      <WhisperApp client:only="react" />
+
+      <EzoicAd slotId={201} />
+
+      <div class="transcribe-faq animate-fade-in">
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+
+        <div class="faq-grid">
+          <div class="glass-card faq-item">
+            <h3>Is my audio data private?</h3>
+            <p>Yes! All processing happens locally in your browser. Your audio files are never uploaded to any server. We cannot see or access your data.</p>
+          </div>
+          <div class="glass-card faq-item">
+            <h3>How large can audio files be?</h3>
+            <p>There&apos;s no hard limit since processing is local. However, very long files (over 30 minutes) may take longer to process depending on your device.</p>
+          </div>
+          <div class="glass-card faq-item">
+            <h3>What audio formats are supported?</h3>
+            <p>WAV, MP3, M4A, FLAC, OGG, WebM, and most common audio formats. The audio is decoded by your browser before processing.</p>
+          </div>
+          <div class="glass-card faq-item">
+            <h3>Why is the first use slower?</h3>
+            <p>The Whisper AI model (~150 MB) needs to download once. After that, it&apos;s cached in your browser for instant re-use, even offline.</p>
+          </div>
+        </div>
+      </div>
+
+      <EzoicAd slotId={202} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .transcribe-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .faq-item h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+  }
+
+  .faq-item p {
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

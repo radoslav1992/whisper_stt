@@ -1,0 +1,375 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EzoicAd from '../components/EzoicAd.astro';
+
+const features = [
+  {
+    icon: '🔒',
+    title: '100% Private',
+    desc: 'Your audio never leaves your device. All processing happens locally in your browser — no uploads, no servers, no data collection.',
+  },
+  {
+    icon: '⚡',
+    title: 'Lightning Fast',
+    desc: 'Powered by WebGPU acceleration, get transcriptions in seconds. Models are cached locally for instant re-use.',
+  },
+  {
+    icon: '🌍',
+    title: '99+ Languages',
+    desc: 'Transcribe audio in any language or translate it to English. Whisper supports over 99 languages with remarkable accuracy.',
+  },
+  {
+    icon: '💰',
+    title: 'Completely Free',
+    desc: 'No subscriptions, no API keys, no hidden fees. AdWhisper is free to use — forever. Powered by open-source AI.',
+  },
+  {
+    icon: '📱',
+    title: 'Works Offline',
+    desc: 'Once the model is downloaded, transcribe audio even without an internet connection. Perfect for on-the-go use.',
+  },
+  {
+    icon: '🎯',
+    title: 'High Accuracy',
+    desc: 'Using OpenAI\'s Whisper Small model — the best balance of accuracy and speed for browser-based transcription.',
+  },
+];
+
+const blogPosts = [
+  {
+    slug: 'what-is-whisper-ai',
+    title: 'What is OpenAI Whisper? A Complete Guide',
+    excerpt: 'Discover how OpenAI\'s Whisper model revolutionizes speech recognition with state-of-the-art accuracy across 99+ languages.',
+    readTime: '5 min',
+  },
+  {
+    slug: 'transcribe-audio-in-browser',
+    title: 'How Browser-Based Transcription Works',
+    excerpt: 'Learn how modern web technologies like WebGPU and WebAssembly enable AI models to run entirely in your browser.',
+    readTime: '7 min',
+  },
+  {
+    slug: 'whisper-vs-cloud-transcription',
+    title: 'Local vs Cloud Transcription: Privacy Compared',
+    excerpt: 'Why local AI transcription is the future of audio privacy, and how it compares to cloud-based alternatives.',
+    readTime: '6 min',
+  },
+];
+
+const steps = [
+  { num: '01', title: 'Upload Audio', desc: 'Drop your audio file or record directly from your microphone.' },
+  { num: '02', title: 'AI Processes Locally', desc: 'Whisper runs on your device — nothing leaves your browser.' },
+  { num: '03', title: 'Get Your Text', desc: 'Copy your transcription or translation with one click.' },
+];
+---
+
+<BaseLayout
+  title="AdWhisper — Free AI Audio Transcription & Translation in Your Browser"
+  description="Transcribe and translate audio for free using OpenAI Whisper AI. 100% private — runs entirely in your browser. No uploads, no servers, no sign-up required."
+  canonicalUrl="/"
+>
+  <!-- Hero Section -->
+  <section class="hero section">
+    <div class="container">
+      <div class="hero-content animate-fade-in">
+        <span class="badge">✨ 100% Free & Private</span>
+        <h1>
+          Transcribe Audio with <span class="gradient-text">AI in Your Browser</span>
+        </h1>
+        <p class="hero-subtitle">
+          Powered by OpenAI's Whisper model. Your audio never leaves your device.
+          No sign-up, no API keys, no limits. Just drop your file and get text.
+        </p>
+        <div class="hero-actions">
+          <a href="/transcribe" class="btn btn-primary btn-lg" id="hero-cta">
+            🎙️ Start Transcribing Free
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg" id="hero-learn-more">
+            Learn How It Works
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">99+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Data uploaded</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">∞</span>
+            <span class="stat-label">Free uses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <EzoicAd slotId={101} />
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose <span class="gradient-text">AdWhisper</span>?</h2>
+      <p class="section-subtitle">The most private, fastest, and most accessible AI transcription tool on the web.</p>
+
+      <div class="grid grid-3 features-grid">
+        {features.map((f, i) => (
+          <div class={`glass-card feature-card animate-fade-in animate-delay-${(i % 4) + 1}`}>
+            <span class="feature-icon">{f.icon}</span>
+            <h3>{f.title}</h3>
+            <p>{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <EzoicAd slotId={102} />
+
+  <!-- How It Works -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+      <p class="section-subtitle">Three simple steps. No sign-up required. Your audio stays on your device.</p>
+
+      <div class="steps-grid">
+        {steps.map((step) => (
+          <div class="glass-card step-card">
+            <span class="step-num">{step.num}</span>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="steps-cta">
+        <a href="/transcribe" class="btn btn-primary btn-lg">Try It Now — Free →</a>
+      </div>
+    </div>
+  </section>
+
+  <EzoicAd slotId={103} />
+
+  <!-- Blog Preview -->
+  <section class="section" id="blog-preview">
+    <div class="container">
+      <h2 class="section-title">From the <span class="gradient-text">Blog</span></h2>
+      <p class="section-subtitle">Learn about AI transcription, privacy, and how to get the most from Whisper.</p>
+
+      <div class="grid grid-3">
+        {blogPosts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="glass-card blog-preview-card">
+            <span class="blog-read-time">{post.readTime} read</span>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+            <span class="blog-link">Read more →</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="steps-cta">
+        <a href="/blog" class="btn btn-secondary btn-lg">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <EzoicAd slotId={104} />
+
+  <!-- CTA Section -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card glass-card">
+        <h2>Ready to Transcribe?</h2>
+        <p>Start transcribing audio for free. No sign-up, no limits, no compromises on privacy.</p>
+        <a href="/transcribe" class="btn btn-primary btn-lg" id="bottom-cta">
+          🎙️ Launch Transcriber
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: var(--space-24) 0 var(--space-16);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: var(--text-6xl);
+    margin: var(--space-6) 0;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto var(--space-8);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-10);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-12);
+    margin-top: var(--space-8);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .stat-value {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stat-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Features */
+  .feature-card {
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-card h3 {
+    margin-bottom: var(--space-2);
+    font-size: var(--text-xl);
+  }
+
+  .feature-card p {
+    font-size: var(--text-sm);
+  }
+
+  /* Steps */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  .step-card {
+    text-align: center;
+    position: relative;
+  }
+
+  .step-num {
+    font-size: var(--text-5xl);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.3;
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .step-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .steps-cta {
+    text-align: center;
+    margin-top: var(--space-8);
+  }
+
+  /* Blog preview */
+  .blog-preview-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-preview-card:hover { color: inherit; }
+
+  .blog-read-time {
+    font-size: var(--text-xs);
+    color: var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .blog-preview-card h3 {
+    font-size: var(--text-lg);
+    transition: color var(--transition-fast);
+  }
+
+  .blog-preview-card:hover h3 {
+    color: var(--color-primary-light);
+  }
+
+  .blog-preview-card p {
+    font-size: var(--text-sm);
+    flex: 1;
+  }
+
+  .blog-link {
+    font-size: var(--text-sm);
+    color: var(--color-primary-light);
+    font-weight: 600;
+  }
+
+  /* CTA */
+  .cta-card {
+    text-align: center;
+    padding: var(--space-16);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.05));
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .cta-card h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .cta-card p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: var(--text-4xl); }
+    .hero-stats { gap: var(--space-6); }
+    .steps-grid { grid-template-columns: 1fr; }
+  }
+</style>
