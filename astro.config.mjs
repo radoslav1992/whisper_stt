@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://transcribe.aihelpcenter.dev',
+  site: 'https://whisperstt.com',
   output: 'static',
   integrations: [react(), sitemap()],
   vite: {
