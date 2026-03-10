@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description, canonicalUrl, ogImage = '/og-default.png', noindex = false } = Astro.props;
-const siteUrl = 'https://adwhisper.com';
+const siteUrl = 'https://whisperstt.com';
 const fullCanonical = canonicalUrl ? `${siteUrl}${canonicalUrl}` : Astro.url.href;
 
 import Header from '../components/Header.astro';
@@ -35,7 +35,7 @@ import '../styles/global.css';
   <meta property="og:description" content={description} />
   <meta property="og:url" content={fullCanonical} />
   <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-  <meta property="og:site_name" content="AdWhisper" />
+  <meta property="og:site_name" content="Whisper STT" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />

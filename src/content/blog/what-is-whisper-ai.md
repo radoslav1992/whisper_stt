@@ -2,7 +2,7 @@
 title: "What is OpenAI Whisper? A Complete Guide to AI Speech Recognition"
 description: "Learn everything about OpenAI's Whisper model — how it works, what makes it special, and why it's the gold standard for automatic speech recognition across 99+ languages."
 date: 2025-12-15
-author: "AdWhisper Team"
+author: "Whisper STT Team"
 tags: ["whisper", "ai", "speech recognition", "openai"]
 readTime: "5 min read"
 ---
@@ -35,7 +35,7 @@ Whisper comes in several sizes, each offering a different tradeoff between speed
 | Medium | 769M | ~2x | Professional use |
 | Large | 1.5B | 1x | Maximum accuracy |
 
-For browser-based applications like AdWhisper, the **Small** model provides the optimal balance — it's accurate enough for professional use while being small enough to download and run efficiently in a web browser.
+For browser-based applications like Whisper STT, the **Small** model provides the optimal balance — it's accurate enough for professional use while being small enough to download and run efficiently in a web browser.
 
 ## 99+ Language Support
 
@@ -58,8 +58,8 @@ Traditional transcription services require you to upload your audio to remote se
 - Personal conversations
 - Sensitive financial discussions
 
-With technologies like AdWhisper, Whisper can now run **entirely in your browser**. Your audio never leaves your device, providing true privacy without sacrificing accuracy.
+With technologies like Whisper STT, Whisper can now run **entirely in your browser**. Your audio never leaves your device, providing true privacy without sacrificing accuracy.
 
 ## Getting Started
 
-Ready to try Whisper for yourself? [Start transcribing with AdWhisper](/transcribe) — it's free, private, and runs entirely in your browser. No sign-up, no API keys, no limits.
+Ready to try Whisper for yourself? [Start transcribing with Whisper STT](/transcribe) — it's free, private, and runs entirely in your browser. No sign-up, no API keys, no limits.

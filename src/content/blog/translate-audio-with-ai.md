@@ -2,7 +2,7 @@
 title: "How to Translate Audio with AI: A Complete Guide to Whisper Translation"
 description: "Learn how to translate audio from any language to English using AI. Step-by-step guide to Whisper's translation capabilities, supported languages, and practical tips."
 date: 2025-11-20
-author: "AdWhisper Team"
+author: "Whisper STT Team"
 tags: ["translation", "multilingual", "guide", "whisper", "languages"]
 readTime: "5 min read"
 ---
@@ -11,7 +11,7 @@ readTime: "5 min read"
 
 Imagine receiving a voice message in Japanese, a podcast in Spanish, or a lecture in French — and being able to understand it instantly, without knowing the language. That's the power of AI audio translation with Whisper.
 
-OpenAI's Whisper model doesn't just transcribe audio — it can also **translate speech from any of its 99+ supported languages directly into English text**. And with AdWhisper, this entire process happens locally in your browser.
+OpenAI's Whisper model doesn't just transcribe audio — it can also **translate speech from any of its 99+ supported languages directly into English text**. And with Whisper STT, this entire process happens locally in your browser.
 
 ## How Whisper Translation Works
 
@@ -25,7 +25,7 @@ This has several advantages:
 
 ## Step-by-Step Translation Guide
 
-### Step 1: Open AdWhisper
+### Step 1: Open Whisper STT
 Navigate to the [transcription tool](/transcribe) and load the Whisper model (first-time users will need to download the model, which takes 30-60 seconds).
 
 ### Step 2: Select Translation Mode
@@ -98,4 +98,4 @@ For non-English target languages, transcribe the audio first, then use a dedicat
 
 ## Start Translating
 
-Ready to break language barriers? [Try AdWhisper's translation feature](/transcribe) — upload audio in any language and get English text in minutes. Free, private, and right in your browser.
+Ready to break language barriers? [Try Whisper STT's translation feature](/transcribe) — upload audio in any language and get English text in minutes. Free, private, and right in your browser.

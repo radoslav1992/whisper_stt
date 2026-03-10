@@ -2,7 +2,7 @@
 title: "How Browser-Based Audio Transcription Works: WebGPU, WASM & Transformers.js"
 description: "A deep dive into the technology that makes in-browser AI transcription possible. Learn how WebAssembly, WebGPU, and Transformers.js bring Whisper AI to your browser tab."
 date: 2025-12-10
-author: "AdWhisper Team"
+author: "Whisper STT Team"
 tags: ["technology", "webgpu", "webassembly", "transformers.js", "browser ai"]
 readTime: "7 min read"
 ---
@@ -34,7 +34,7 @@ WebAssembly is a binary instruction format that allows code to run at near-nativ
 - **Safety**: Runs in a sandboxed environment, maintaining browser security guarantees
 - **Predictability**: Consistent performance characteristics across different browser engines
 
-When you run Whisper in your browser through AdWhisper, the actual number-crunching happens via WASM, ensuring efficient processing even on modest hardware.
+When you run Whisper in your browser through Whisper STT, the actual number-crunching happens via WASM, ensuring efficient processing even on modest hardware.
 
 ### 3. WebGPU — GPU Acceleration in the Browser
 
@@ -49,11 +49,11 @@ As WebGPU adoption grows, browser-based AI transcription will become even faster
 
 ## How the Transcription Pipeline Works
 
-When you use AdWhisper to transcribe audio, here's what happens behind the scenes:
+When you use Whisper STT to transcribe audio, here's what happens behind the scenes:
 
 ### Step 1: Model Download & Caching
 
-The first time you use AdWhisper, the Whisper Small model (~150 MB, quantized) is downloaded from Hugging Face's CDN. The model files are stored in your browser's **Cache API** — a persistent storage mechanism that survives page reloads and browser restarts.
+The first time you use Whisper STT, the Whisper Small model (~150 MB, quantized) is downloaded from Hugging Face's CDN. The model files are stored in your browser's **Cache API** — a persistent storage mechanism that survives page reloads and browser restarts.
 
 On subsequent visits, the model loads from this local cache in seconds, and no network request is needed. This means you can even transcribe audio **offline** after the initial download.
 
@@ -86,7 +86,7 @@ The completed transcription is sent back to the main thread and displayed in the
 
 The entire pipeline described above happens **within your browser**. Here's what that means for privacy:
 
-| Aspect | Cloud Transcription | AdWhisper (Browser) |
+| Aspect | Cloud Transcription | Whisper STT (Browser) |
 |--------|-------------------|---------------------|
 | Audio uploaded to servers | ✅ Yes | ❌ Never |
 | Third-party access | Possible | Impossible |
@@ -104,4 +104,4 @@ On modern hardware, you can expect:
 
 ## Try It Yourself
 
-Experience the future of private audio transcription. [Launch AdWhisper's transcriber](/transcribe) and see browser-based AI in action.
+Experience the future of private audio transcription. [Launch Whisper STT's transcriber](/transcribe) and see browser-based AI in action.

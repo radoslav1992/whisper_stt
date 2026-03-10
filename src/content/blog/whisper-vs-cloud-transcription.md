@@ -2,7 +2,7 @@
 title: "Local vs Cloud Transcription: Why Privacy Matters More Than Ever"
 description: "Compare local AI transcription with cloud-based services. Learn why processing audio on your device is safer, more private, and increasingly more practical."
 date: 2025-11-28
-author: "AdWhisper Team"
+author: "Whisper STT Team"
 tags: ["privacy", "comparison", "cloud", "local ai", "data protection"]
 readTime: "6 min read"
 ---
@@ -34,7 +34,7 @@ Let's look at what major services do with your data:
 | Amazon Transcribe | Varies by config | Optional | In transit + at rest |
 | Microsoft Azure | 30 days default | Optional opt-in | In transit + at rest |
 | Otter.ai | Retained while account active | Yes (for improvement) | In transit + at rest |
-| **AdWhisper** | **Never stored** | **Never** | **N/A (local only)** |
+| **Whisper STT** | **Never stored** | **Never** | **N/A (local only)** |
 
 Even with encryption and configurable retention, cloud services create a fundamental tension: your data exists on infrastructure you don't control.
 
@@ -54,16 +54,16 @@ Intimate conversations, therapy sessions, personal journals — there are many s
 
 ## The Local AI Advantage
 
-Local transcription, as offered by AdWhisper, eliminates these concerns entirely:
+Local transcription, as offered by Whisper STT, eliminates these concerns entirely:
 
 ### Complete Data Sovereignty
 Your audio file goes from your disk to your browser's memory, gets processed by the AI model, and produces text — all within your device. The audio never touches a network.
 
 ### No Account Required
-Cloud services require accounts, which create additional data points: email addresses, usage patterns, timestamps, and more. AdWhisper requires nothing — no sign-up, no login, no personal information.
+Cloud services require accounts, which create additional data points: email addresses, usage patterns, timestamps, and more. Whisper STT requires nothing — no sign-up, no login, no personal information.
 
 ### Offline Capability
-After the one-time model download, AdWhisper works completely offline. This isn't just convenient — it's a privacy guarantee. No network connection means no possibility of data exfiltration.
+After the one-time model download, Whisper STT works completely offline. This isn't just convenient — it's a privacy guarantee. No network connection means no possibility of data exfiltration.
 
 ### Regulatory Compliance
 Since no data is processed externally, local transcription inherently complies with:
@@ -78,7 +78,7 @@ No data processing agreements needed. No data protection impact assessments requ
 
 The traditional argument for cloud transcription has been accuracy. Cloud services run large models on powerful hardware, while local solutions were historically limited. But that gap is closing rapidly:
 
-**Whisper Small (used by AdWhisper)**:
+**Whisper Small (used by Whisper STT)**:
 - 244 million parameters
 - Trained on 680,000 hours of audio
 - Supports 99+ languages
@@ -94,4 +94,4 @@ For the vast majority of users, browser-based local transcription offers the bes
 
 ## Try Local Transcription
 
-Experience private, local transcription for yourself. [Launch AdWhisper](/transcribe) — it's free, requires no sign-up, and your audio never leaves your device.
+Experience private, local transcription for yourself. [Launch Whisper STT](/transcribe) — it's free, requires no sign-up, and your audio never leaves your device.

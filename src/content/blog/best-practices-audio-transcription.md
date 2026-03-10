@@ -2,7 +2,7 @@
 title: "10 Best Practices for Accurate Audio Transcription with AI"
 description: "Get better transcription results from AI speech recognition. Learn expert tips for recording quality, file preparation, and maximizing Whisper accuracy."
 date: 2025-12-05
-author: "AdWhisper Team"
+author: "Whisper STT Team"
 tags: ["tips", "transcription", "best practices", "audio quality"]
 readTime: "5 min read"
 ---
@@ -34,7 +34,7 @@ Avoid heavily compressed audio (e.g., MP3 at 64 kbps or lower), as compression a
 
 ## 3. Use the Right Language Setting
 
-When using AdWhisper, you have two language options:
+When using Whisper STT, you have two language options:
 
 - **Auto-detect**: Let Whisper figure out the language. Works well for clear speech in common languages.
 - **Manual selection**: Specify the language yourself. This can improve accuracy, especially for less common languages or accented speech.
@@ -43,7 +43,7 @@ When using AdWhisper, you have two language options:
 
 ## 4. Keep Recordings Under 30 Minutes
 
-While there's no hard limit on file size in AdWhisper (since processing is local), shorter files generally produce better results:
+While there's no hard limit on file size in Whisper STT (since processing is local), shorter files generally produce better results:
 
 - **Under 10 minutes**: Optimal for speed and accuracy
 - **10-30 minutes**: Good results with slightly longer processing time
@@ -83,7 +83,7 @@ Whisper doesn't natively distinguish between speakers (no speaker diarization). 
 
 ## 8. Use Transcribe vs. Translate Appropriately
 
-AdWhisper offers two modes:
+Whisper STT offers two modes:
 
 - **Transcribe**: Converts speech to text in the same language. Use this when you want a text version of what was said.
 - **Translate**: Converts speech in any language to English text. Use this when you need to understand content in a foreign language.
@@ -102,7 +102,7 @@ No AI transcription is perfect. Always review the output for:
 
 ## 10. Take Advantage of Caching
 
-With AdWhisper, the Whisper model is cached in your browser after the first download. This means:
+With Whisper STT, the Whisper model is cached in your browser after the first download. This means:
 
 - **Second use is instant**: No waiting for model downloads
 - **Works offline**: Transcribe without internet after initial setup
@@ -112,4 +112,4 @@ Keep the model cached by not clearing your browser data, and you'll always have 
 
 ## Start Transcribing
 
-Put these tips into practice with [AdWhisper's free transcription tool](/transcribe). Upload your audio and see the difference that good practices make.
+Put these tips into practice with [Whisper STT's free transcription tool](/transcribe). Upload your audio and see the difference that good practices make.
