@@ -3,7 +3,7 @@ module.exports = {
         {
             name: 'adwhisper',
             script: 'npx',
-            args: 'serve dist -l 4323 -s',
+            args: 'serve dist -l 4323',
             cwd: '/var/www/adwhisper',
             env: {
                 NODE_ENV: 'production',
