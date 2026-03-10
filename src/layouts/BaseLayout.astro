@@ -46,11 +46,13 @@ import '../styles/global.css';
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Ezoic Ad Script -->
-  <script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
-  <script>
-    window.ezstandalone = window.ezstandalone || {};
-    ezstandalone.cmd = ezstandalone.cmd || [];
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTCYHTWN0Q"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DTCYHTWN0Q');
   </script>
 </head>
 <body>
@@ -60,13 +62,6 @@ import '../styles/global.css';
   </main>
   <Footer />
 
-  <!-- Ezoic page-level init -->
-  <script is:inline>
-    if (typeof ezstandalone !== 'undefined') {
-      ezstandalone.cmd.push(function() {
-        ezstandalone.showAds();
-      });
-    }
-  </script>
+
 </body>
 </html>
